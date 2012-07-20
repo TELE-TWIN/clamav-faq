@@ -1,0 +1,4 @@
+clamav-faq
+==========
+
+ClamAV FAQ

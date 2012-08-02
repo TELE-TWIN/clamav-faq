@@ -1,5 +1,9 @@
 # FAQ - Safebrowsing #
 
+## Official FAQ ##
+
+This is the official FAQ. For additional FAQs please visit our [GitHub repository](https://github.com/vrtadmin/clamav-faq) . You are encouraged to contribute to them.
+
 ClamAV 0.95 introduced support for Google Safe Browsing database.
 The database is packed inside a CVD file and distributed through our mirror network as <a href="http:	//db.local.clamav.net/safebrowsing.cvd">safebrowsing.cvd</a> .
 This feature is disabled by default on all installations and should be enabled with extreme care.

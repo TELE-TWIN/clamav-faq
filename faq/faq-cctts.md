@@ -1,5 +1,9 @@
 # FAQ - CCTTS #
 
+## Official FAQ ##
+
+This is the official FAQ. For additional FAQs please visit our [GitHub repository](https://github.com/vrtadmin/clamav-faq) . You are encouraged to contribute to them.
+
 * What is it?
 
 >The ClamAV Community Threat Tracking System sends summary data to our server about the malware detected on your system. Freshclam usually sends the data when you update your signatures. You can also use freshclam’s --submit-stats option to submit statistics without updating the signature database.

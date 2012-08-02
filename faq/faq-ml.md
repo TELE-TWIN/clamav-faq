@@ -2,7 +2,7 @@
 
 ## Official FAQ ##
 
-This is the official FAQ. For additional FAQs please visit our "Wiki":	http://wiki.clamav.net/Main/FAQ . You are encouraged to contribute to them. The ClamAV team continuosly monitor that page and will add the best ones below.
+This is the official FAQ. For additional FAQs please visit our [GitHub repository](https://github.com/vrtadmin/clamav-faq) . You are encouraged to contribute to them.
 
 ## Using the ClamAV mailing lists ##
 

@@ -1,5 +1,9 @@
 # FAQ-win32 #
 
+## Official FAQ ##
+
+This is the official FAQ. For additional FAQs please visit our [GitHub repository](https://github.com/vrtadmin/clamav-faq) . You are encouraged to contribute to them.
+
 <strong>Q1.</strong> <em>Why is ClamAV for Windows called Immunet 3.0, powered by ClamAV now?</em>
 
 <strong>A1.</strong> With Sourcefire’s acquisition of Immunet the combined product is now called Immunet 3.0, powered by ClamAV.

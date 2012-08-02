@@ -1,5 +1,9 @@
 # FAQ - Troubleshooting #
 
+## Official FAQ ##
+
+This is the official FAQ. For additional FAQs please visit our [GitHub repository](https://github.com/vrtadmin/clamav-faq) . You are encouraged to contribute to them.
+
 >The virus database is usually updated many times per week. Check out "http:	//lurker.clamav.net/list/clamav-virusdb.html":http://lurker.clamav.net/list/clamav-virusdb.html to see our response times to new threats. The virusdb team tries to keep up with the latest worm  in the wild. When a new worm spreads out, often it is  less than one hour before we release a database update. You can contribute to make the virusdb updating process  more efficient by submitting samples of viruses  via our "web interface":submit.
 
 * How many times per hour shall I run freshclam?

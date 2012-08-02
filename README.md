@@ -6,5 +6,5 @@ This is the official ClamAV FAQ repository. To checkout all the files:
 
 ### FAQ Pages ###
 
-[link]: https://github.com/vrtadmin/clamav-faq/blob/master/faq/faq-cvd.md "FAQ - CVD"
+[FAQ - CVD](https://github.com/vrtadmin/clamav-faq/blob/master/faq/faq-cvd.md)
 

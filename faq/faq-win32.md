@@ -43,4 +43,6 @@ For a complete overview please see the <a href="http:	//store.sourcefire.com/pri
 
 <strong>A9.</strong> The Plus Edition contains additional features and functionality. The list of features and functionality are listed <a href="http://blog.immunet.com/blog/2011/2/7/version-30-the-next-step-in-anti-malware-protection.html">here</a>. 
 
+<strong>Q10.</strong> <em>Are there 64 bit versions of ClamAV for Windows as well as 32 bit?</em>
 
+<strong>A10.</strong> Yes.  You can find both versions here: <a href="http://sourceforge.net/projects/clamav/files/clamav/win32/" target="_blank">at Sourceforge.</em>

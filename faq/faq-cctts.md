@@ -23,7 +23,7 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
 
 * How can I see statistics regarding the malware detected by my own ClamAV installation?
 
->Get an HostID (see following FAQs) for each of your ClamAV installations and add the directive "DetectionStatsHostID XXXX" (where XXXX is your HostID) to your freshclam.conf. You will be able to view the data submitted by your ClamAV installation anytime by logging on <a href="http:	//www.stats.clamav.net">http://www.stats.clamav.net</a>.
+>Get an HostID (see following FAQs) for each of your ClamAV installations and add the directive "DetectionStatsHostID XXXX" (where XXXX is your HostID) to your freshclam.conf. You will be able to view the data submitted by your ClamAV installation anytime by logging on [http://www.stats.clamav.net](http://www.stats.clamav.net).
 
 * What is an HostID?
 
@@ -31,7 +31,7 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
 
 * How do I get an HostID?
 
->You can get your own HostID by logging on <a href="http://www.stats.clamav.net">http://www.stats.clamav.net</a> and clicking on "Add new host"
+>You can get your own HostID by logging on [http://www.stats.clamav.net](http://www.stats.clamav.net) and clicking on "Add new host"
 
 * How does Freshclam send data?
 

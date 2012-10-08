@@ -36,4 +36,5 @@ If you obtained a server from a competent hosting provider they probably already
 >yum update clamav (if everything updated properly, run freshclam)
 
 [Upgrade Instructions](https://github.com/vrtadmin/clamav-faq/blob/master/faq/Upgrading.md)
-[Installing ClamAV](https://github.com/vrtadmin/clamav-faq/blob/master/faq/Installing.html)
+
+[Installing ClamAV](https://github.com/vrtadmin/clamav-faq/blob/master/faq/Installing.md)

@@ -1,17 +1,7 @@
-Title:	Upgrading
-Author:	Sourcefire VRT
-Affiliation:	Sourcefire VRT
-Date:	2012-06-26
-Subject:	ClamAV - Upgrading
-Base Header Level:	2
-Copyright:	Sourcefire Inc.
-CSS:	/style/clam.css
-
 # Upgrading ClamAV #
 
 * [If you installed from packages][]
 * [If you installed from sources][]
-* [Upgrade notes][]
 * [Webmin and yum][]
 
 ## If you installed from packages ##
@@ -37,21 +27,6 @@ __Note:__ Depending on your installation method, you might want to backup config
 
 __Note:__ Backup your database signature (located in _/usr/local/share/clamav_ by default) before upgrading to newer ClamAV version. Restore the backed up database signature before running the updated version. This is to avoid getting the _/usr/local/share/clamav not locked_ error message when doing _freshclam_.
 
-## Upgrade notes ##
-
-UpgradeNotes097
-UpgradeNotes0963
-UpgradeNotes0962
-UpgradeNotes0961
-UpgradeNotes096
-UpgradeNotes0953
-UpgradeNotes095
-UpgradeNotes094
-UpgradeNotes093
-UpgradeNotes091
-UpgradeNotes0901
-UpgradeNotes090
-
 ## Webmin and yum ##
 
 If you obtained a server from a competent hosting provider they probably already installed clamav using yum and the extras repository. To obtain a new version:
@@ -60,4 +35,5 @@ If you obtained a server from a competent hosting provider they probably already
 
 >yum update clamav (if everything updated properly, run freshclam)
 
-[Installing ClamAV]: /Installing.html
+[Upgrade Instructions](https://github.com/vrtadmin/clamav-faq/blob/master/faq/Upgrading.md)
+[Installing ClamAV](https://github.com/vrtadmin/clamav-faq/blob/master/faq/Installing.html)

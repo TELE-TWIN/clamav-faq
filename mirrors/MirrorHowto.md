@@ -76,15 +76,15 @@ If you are using nginx:
 </pre>
 
 If you are using lighttpd:
-<pre>$HTTP["host"] =~ "^((database|db\..+)\.clamav\.net|clamav\.foo\.com)$" {           
+<pre>$HTTP["host"] =~ "^((database|db\..+)\.clamav\.net|clamav\.foo\.com)$" {
        var.basedir    = "/home/users/clamavdb"
-       server.document-root   = basedir + "/public_html"                       
-       accesslog.filename     = "/var/log/lighttd/clamav.foo.com.access.log"          
-       index-file.names       = ( "index.html" )                             
-       $HTTP["url"] =~ "\.cvd$" {                                             
-               connection.kbytes-per-second = 200                             
-       }                                                                      
-}                                         
+       server.document-root   = basedir + "/public_html"
+       accesslog.filename     = "/var/log/lighttd/clamav.foo.com.access.log"
+       index-file.names       = ( "index.html" )
+       $HTTP["url"] =~ "\.cvd$" {
+               connection.kbytes-per-second = 200
+       }
+}
 </pre>
 
 If you cannot create wildcard vhosts, you must use IP based virtual hosts! Please note that an http redirect (e.g. RedirectPermanent) is not enough! freshclam can't handle redirects yet.

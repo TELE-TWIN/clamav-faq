@@ -172,30 +172,32 @@ SetEnvIfNoCase User-Agent "^ClamWin/0.6" bad_clamav
 
 <pre>$HTTP["useragent"] =~ "^clam(av|Win)\/(0.[67]|.*devel).*$" {
   url.access-deny = ( "" )
-}</pre>
+}
+</pre>
 
 
 ### Nginx ###
 
 <pre>if ( $http_user_agent ~* "^clam(av|win)\/(0\.[67]|devel-200[0-8]|devel-0\.[0-8]).*$" ) {
   return 404;
-}</pre>
+}
+</pre>
 
 
 ## Block outdated clients
 
 Due to numerous connects of outdated clients (&gt; 300,000 / day), we add single IP temporarily to the firewall.
 
-Requirements:
+Requirements.
 
    * [Apache HTTP-Server](http://httpd.apache.org/)
    * [syslog-ng](http://www.balabit.com/)
    * [iptables](http://netfilter.org/projects/iptables/index.html)
    * Kernel with recent-support
 
-## Configure Apache HTTP-Server
 
-[[MirrorsCoordination#Additional_tweaks_manually_black][Setup manually blackList old versions of ClamAV]]
+## Configure Apache HTTP-Server ##
+
 
 The Access Log of apache must send to syslog-ng:
 
@@ -227,7 +229,9 @@ If you replace the _rcheck_ here with an _update_ statement, the block will last
 By default xt_recent stores 100 IP addresses. You can change the limit with "modprobe ipt_recent ip_list_tot=10000" (here 10000). This is only possible before the first iptables rule is put on.
 
 Use.
-<pre>$ chmod 600 /sys/module/xt_recent/parameters/ip_list_tot<br /> echo 10000 &gt; /sys/module/xt_recent/parameters/ip_list_tot<br /> chmod 400 /sys/module/xt_recent/parameters/ip_list_tot
+<pre>$ chmod 600 /sys/module/xt_recent/parameters/ip_list_tot
+$ echo 10000 &gt; /sys/module/xt_recent/parameters/ip_list_tot
+$ chmod 400 /sys/module/xt_recent/parameters/ip_list_tot
 </pre>
 
 to change ip_list_tot "on-the-fly"

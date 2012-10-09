@@ -1,0 +1,23 @@
+#
+# Set the variables below to fit your site.
+#
+# TO is the DocumentRoot for http://database.clamav.net/ and
+# http://clamav.yourhost.com
+#
+# RSYNC_HOST is the name of the upstream site (rsync.clamav.net)
+#
+# RSYNC_USER is the username given you by the upstream mirror
+#
+# RSYNC_PASSWORD is the password given you by the upstream mirror
+#
+# chmod 744 ~/bin/clam-clientsync
+# chmod 600 ~/.clam-clientsync.conf
+# Add the ssh key to your .ssh/authorized_keys file
+# Make sure that authorized_keys is world readable
+
+TO="$HOME/changeme/"
+RSYNC_USER=changeme
+RSYNC_PASSWORD="changeme"
+MODULE="clamavdb"
+EXCLUDE='--exclude local_* --exclude .htaccess'
+

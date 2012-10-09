@@ -1,0 +1,8 @@
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+Comment: PGP Key available at http://nervous.oltrelinux.com/nervous.asc
+
+iD8DBQBID3OFYneP9F78VYIRAuASAJ9+FjrUUZFAQFxy9+rdCTGkHtAY5QCdFIkE
+5cp4xNANKVICXibF4HN8GTE=
+=L3nz
+-----END PGP SIGNATURE-----

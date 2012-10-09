@@ -1,0 +1,40 @@
+#! /bin/bash 
+set -e -f
+
+
+. $HOME/etc/clam-clientsync.conf
+
+export RSYNC_PASSWORD
+
+RSYNC_HOST=$1
+HOSTNAME=`hostname`
+LOCK="${TO}/Archive-Update-in-Progress-${HOSTNAME}"
+
+# do I know the master rsync server?
+if [ -z "$RSYNC_HOST" ]; then
+  echo Syntax: $0 rsyncN.clamav.net where N is either 1 or 2
+  exit
+fi
+
+# Get in the right directory and set the umask to be group writable
+# 
+cd $HOME
+umask 002
+
+# Check to see if another sync is in progress
+if lockfile -! -l 7200 -r 0 "$LOCK"; then
+  echo ${HOSTNAME} unable to start rsync, lock file exists
+  exit 1
+fi
+trap "rm -f $LOCK > /dev/null 2>&1" exit  
+
+set +e
+rsync --recursive --links --hard-links --times --verbose --compress --delete \
+     --timeout=180 --exclude "Archive-Update-in-Progress-${HOSTNAME}" \
+     $EXCLUDE \
+     $RSYNC_USER@$RSYNC_HOST::$MODULE $TO > rsync.log 2>&1
+
+if [ -x /usr/bin/savelog ]; then
+	/usr/bin/savelog rsync.log > /dev/null 2>&1
+fi
+

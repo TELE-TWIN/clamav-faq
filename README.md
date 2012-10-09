@@ -21,3 +21,9 @@ This is the official ClamAV FAQ repository. To checkout all the files:
 [FAQ - Upgrading](https://github.com/vrtadmin/clamav-faq/blob/master/faq/faq-upgrade.md)
 
 [FAQ - Win32](https://github.com/vrtadmin/clamav-faq/blob/master/faq/faq-win32.md)
+
+### Mirror How-To ###
+
+[Mirror How-To](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorHowto.md)
+
+[Mirror Coordination](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorsCoordination.md)

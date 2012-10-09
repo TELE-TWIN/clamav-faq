@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.6 (GNU/Linux)
-Comment: PGP Key available at http://nervous.oltrelinux.com/nervous.asc
+Version: GnuPG/MacGPG2 v2.0.19 (Darwin)
+Comment: GPGTools - http://gpgtools.org
 
-iD8DBQBID3OFYneP9F78VYIRAuASAJ9+FjrUUZFAQFxy9+rdCTGkHtAY5QCdFIkE
-5cp4xNANKVICXibF4HN8GTE=
-=L3nz
+iEYEABECAAYFAlB0V4AACgkQaBoqZBVJfwMV3gCgj7KEFS4CspjNFC2FgFzLLIGo
+ojQAnAyDRqz0EBbxGCWavAYqWpneSrZp
+=0k46
 -----END PGP SIGNATURE-----

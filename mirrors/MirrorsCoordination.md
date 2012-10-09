@@ -137,11 +137,15 @@ If you are using lighttpd, you'll need to include local_blacklist_lighttpd into 
 <pre>$HTTP["host"] =~ "^(clamav\.yourhostname\.tld|.*\.clamav\.net)$" {                     
     include "/path/local_blacklist_lighttpd"</pre>
 
-## Additional tweaks: manually blackList old versions of ClamAV
+
+## Additional tweaks ##
+
+### Manually blackList old versions of ClamAV ###
 
 We kindly ask our mirrors to support as many old versions of ClamAV as possible. However we understand that this can eat a lot of resources and not every mirror can afford it. Hereby we provide some config. examples for various web servers:
 
-Apache HTTP Server:
+
+### Apache HTTP Server ###
 
 <pre>SetEnvIfNoCase User-Agent "^clamav/0.6" bad_clamav 
 SetEnvIfNoCase User-Agent "^clamav/devel-2008" bad_clamav
@@ -155,17 +159,20 @@ SetEnvIfNoCase User-Agent "^ClamWin/0.6" bad_clamav
 </Location>
 </pre>
 
-lighttpd:
+
+### Lighttpd ###
 
 <pre>$HTTP["useragent"] =~ "^clam(av|Win)\/(0.[67]|.*devel).*$" {
   url.access-deny = ( "" )
 }</pre>
 
-Nginx:
+
+### Nginx ###
 
 <pre>if ( $http_user_agent ~* "^clam(av|win)\/(0\.[67]|devel-200[0-8]|devel-0\.[0-8]).*$" ) {
   return 404;
 }</pre>
+
 
 ## Block outdated clients
 

@@ -128,14 +128,14 @@ Verify the signature using:
 <pre>$ gpg --verify authorized_keys_noshell.sig authorized_keys_noshell
 $ gpg --verify authorized_keys_shell.sig authorized_keys_shell</pre>
 
-My PGP public key is available on most keyservers and on [[http://www.clamav.net/about/team][ClamAV web site]]. It can eventually be verified by telephone. Contact me by email first.
+The VRT PGP public key is available on most [keyservers](http://pgp.mit.edu:11371/pks/lookup?search=Sourcefire+VRT&op=index) and on [http://labs.snort.org/contact.html](VRT Labs). It can eventually be verified by telephone. Contact us by email first.
 
-If you don't want to give us shell access, copy authorized_keys_noshell to ~clamavdb/.ssh/authorized_keys:
+If you don't want to give us shell access, copy authorized_keys_noshell to ~/clamavdb/.ssh/authorized_keys:
 <pre>$ cp authorized_keys_noshell ~/.ssh/authorized_keys
 </pre>
 
 If you want to give us shell access, use authorized_keys_shell instead:
-<pre>$ cp authorized_keys_shell ~clamavdb/.ssh/authorized_keys</pre>
+<pre>$ cp authorized_keys_shell ~/clamavdb/.ssh/authorized_keys</pre>
 
 In both cases you have to make sure that files and directories have proper permissions:
 <pre>$ chmod 755 ~clamavdb

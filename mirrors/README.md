@@ -104,7 +104,7 @@ no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty,command="bash ~/
 
 The only command which can be executed by the owner of the corresponding ssh private key is ~/bin/clam-clientsync. We will only be able to trigger the execution of that script and nothing else!
 
-If you would like to grant us shell access, use authorized_keys_shell instead. That file contains Luca Gibelli ssh public key too.
+If you would like to grant us shell access, use authorized_keys_shell instead. 
 
 ### Download scripts and config. files
 
@@ -211,7 +211,7 @@ Make sure to save these rules so that they are executed everytime you reboot the
 
 ### Protect your mirror from abusers
 
-You should check out the [[MirrorsCoordination]] page for information about protecting your mirror from abusers. If your mirror has strict bandwidth/resources you will find some useful hints on that page.
+You should check out the [MirrorsCoordination](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorsCoordination.md) page for information about protecting your mirror from abusers. If your mirror has strict bandwidth/resources you will find some useful hints on that page.
 
 ### Add your logo
 
@@ -243,7 +243,7 @@ Refer to your stats generator's manual for more info.
 
 Important note for Apache2 users:
 
-As stated in the Apache documentation at http://httpd.apache.org/docs/2.0/mod/mod_log_config.html please note that in httpd 2.0, unlike 1.3, the %b and %B format strings do not represent the number of bytes sent to the client, but simply the size in bytes of the HTTP response (which will differ, for instance, if the connection is aborted, or if SSL is used).
+As stated in the Apache documentation at [http://httpd.apache.org/docs/2.0/mod/mod_log_config.html](http://httpd.apache.org/docs/2.0/mod/mod_log_config.html) please note that in httpd 2.0, unlike 1.3, the %b and %B format strings do not represent the number of bytes sent to the client, but simply the size in bytes of the HTTP response (which will differ, for instance, if the connection is aborted, or if SSL is used).
 
 The %O format provided by mod_logio will log the actual number of bytes sent over the network.
 
@@ -251,8 +251,8 @@ The %O format provided by mod_logio will log the actual number of bytes sent ove
 
 Scheduled downtimes should be announced on the clamav-mirrors mailing-list in advance.
 
-   * IP address changes should be notified in advance too.</p>
-   * Changes in the ssh host public key of the mirror host should be announced on the clamav-mirrors mailing-list.</p>
+   * IP address changes should be notified in advance too.
+   * Changes in the ssh host public key of the mirror host should be announced on the [clamav-mirrors mailing-list](http://lists.clamav.net/mailman/listinfo/clamav-mirrors).
    * It is essential to be able to contact the sysadmin responsible for the mirror server and get a quick response. Whenever a problem with a mirror occurs we need to immediately find out its cause and act consequently.
 
 ## Mirror status
@@ -261,7 +261,7 @@ Every mirror is continuously monitored to ensure that every ClamAV user gets the
 
 Every three hours we upload a file called timestamp on every mirror. Every hour we choose a random mirror and check that timestamp is fresh. If the file is one day old or unavailable, the mirror if marked as "old" and the ClamAV team receive a warning. If the situation persists for two days, the mirror is temporarily removed from the list.
 
-You can view the current status of every ClamAV database mirror at http://www.clamav.net/mirrors.html.
+You can view the current status of every ClamAV database mirror at [http://www.clamav.net/mirrors.html](http://www.clamav.net/mirrors.html).
 
 Please note that this page doesn't reflect how often the database is propagated to mirrors. It just shows the trend of mirrors availability.
 

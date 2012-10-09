@@ -290,7 +290,7 @@ Our users are encouraged to add the following directives to their freshclam.conf
 
 where XY stands for the country the server lives in a full list is available at http://www.iana.org/cctld/cctld-whois.htm. Each db.XY.clamav.net DNS record points to the mirrors available in the corresponding country. For a complete list of the mirrors available in each country visit http://www.clamav.net/mirrors.html.
 
-If freshclam can't connect to db.XY.clamav.net, it will fallback on db.local.clamav.net, which attempts to redirect the user to the closest pool of mirrors by looking up its ip source address in GeoIP database (http://www.maxmind.com/app/geoip_country).See:
+If freshclam can't connect to db.XY.clamav.net, it will fallback on db.local.clamav.net, which attempts to redirect the user to the closest pool of mirrors by looking up its ip source address in the [GeoIP database](http://www.maxmind.com/app/geoip_country). See:
 
    * http://www.iana.org/assignments/ipv4-address-space
    * http://ip-to-country.webhosting.info/

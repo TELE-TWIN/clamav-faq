@@ -120,23 +120,24 @@ You can write your own script to regularly download this file and use it on your
 
 If you are running Apache and mod_access is enabled (most common setup), this can be as simple as this.
 
-<pre>#!/bin/bash                                                                    
-. $HOME/etc/clam-clientsync.conf                                               
-export RSYNC_PASSWORD                                                          
+<pre>#!/bin/bash
+. $HOME/etc/clam-clientsync.conf
+export RSYNC_PASSWORD
 rsync $RSYNC_USER@rsync.clamav.net::$MODULE/local_blacklist_apache $TO/.htaccess
 </pre>
 
 ### Lighttpd ###
 
-<pre>#!/bin/bash                                                                    
-. $HOME/etc/clam-clientsync.conf                                               
-export RSYNC_PASSWORD                                                          
+<pre>#!/bin/bash
+. $HOME/etc/clam-clientsync.conf
+export RSYNC_PASSWORD
 rsync $RSYNC_USER@rsync.clamav.net::$MODULE/local_blacklist_lighttpd /path/local_blacklist_lighttpd</pre>
 
-If you are using lighttpd, you'll need to include local_blacklist_lighttpd into main.conf, like this.
+You will need to include local_blacklist_lighttpd into main.conf, like this.
 
 <pre>$HTTP["host"] =~ "^(clamav\.yourhostname\.tld|.*\.clamav\.net)$" {                     
-    include "/path/local_blacklist_lighttpd"</pre>
+    include "/path/local_blacklist_lighttpd"
+</pre>
 
 
 ## Additional tweaks ##

@@ -22,7 +22,9 @@ Here is an example config that will do the following:
   LargeFileLimit .cdiff 1 400000
   MaxConnection all 50
   MinBandwidth all 20000
-</IfModule></pre>
+</IfModule>
+</pre>
+
 
 ### Lighttpd ###
 
@@ -33,7 +35,9 @@ Here is an example config that will do the following:
 $HTTP["url"] =~ "\.cdiff$" {
   server.max-connections = 50
   connection.kbytes-per-second = 400
-}</pre>
+}
+</pre>
+
 
 ### Nginx ###
 
@@ -42,7 +46,8 @@ $HTTP["url"] =~ "\.cdiff$" {
 }
 if ( $request_uri ~ "\.cdiff$" ) {
        set $limit_rate 400k;
-}</pre>
+}
+</pre>
 
 _Note_ You can also use mod_cband to limit the download-speed.
 

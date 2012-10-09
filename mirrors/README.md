@@ -76,15 +76,15 @@ If you are using nginx:
 </pre>
 
 If you are using lighttpd:
-<pre>$HTTP["host"] =~ "^((database|db\..+)\.clamav\.net|clamav\.foo\.com)$" {           
+<pre>$HTTP["host"] =~ "^((database|db\..+)\.clamav\.net|clamav\.foo\.com)$" {
        var.basedir    = "/home/users/clamavdb"
-       server.document-root   = basedir + "/public_html"                       
-       accesslog.filename     = "/var/log/lighttd/clamav.foo.com.access.log"          
-       index-file.names       = ( "index.html" )                             
-       $HTTP["url"] =~ "\.cvd$" {                                             
-               connection.kbytes-per-second = 200                             
-       }                                                                      
-}                                         
+       server.document-root   = basedir + "/public_html"
+       accesslog.filename     = "/var/log/lighttd/clamav.foo.com.access.log"
+       index-file.names       = ( "index.html" )
+       $HTTP["url"] =~ "\.cvd$" {
+               connection.kbytes-per-second = 200
+       }
+}
 </pre>
 
 If you cannot create wildcard vhosts, you must use IP based virtual hosts! Please note that an http redirect (e.g. RedirectPermanent) is not enough! freshclam can't handle redirects yet.
@@ -128,7 +128,7 @@ Verify the signature using:
 <pre>$ gpg --verify authorized_keys_noshell.sig authorized_keys_noshell
 $ gpg --verify authorized_keys_shell.sig authorized_keys_shell</pre>
 
-The VRT PGP public key is available on [VRT Labs](http://labs.snort.org/contact.html) and on most keyservers like this one http://pgp.mit.edu:11371/pks/lookup?search=Sourcefire+VRT&op=index. It can eventually be verified by telephone. Contact us by email first.
+The VRT PGP public key is available on [the VRT Labs website](https://labs.snort.org/contact.html) and on most keyservers like this one http://pgp.mit.edu:11371/pks/lookup?search=Sourcefire+VRT&op=index. It can eventually be verified by telephone. Contact us by email first.
 
 If you don't want to give us shell access, copy authorized_keys_noshell to ~/clamavdb/.ssh/authorized_keys:
 <pre>$ cp authorized_keys_noshell ~/.ssh/authorized_keys
@@ -138,20 +138,20 @@ If you want to give us shell access, use authorized_keys_shell instead:
 <pre>$ cp authorized_keys_shell ~/clamavdb/.ssh/authorized_keys</pre>
 
 In both cases you have to make sure that files and directories have proper permissions:
-<pre>$ chmod 755 ~clamavdb
-$ chmod 700 ~clamavdb/.ssh
-$ chmod 600 ~clamavdb/.ssh/authorized_keys
+<pre>$ chmod 755 ~/clamavdb
+$ chmod 700 ~/clamavdb/.ssh
+$ chmod 600 ~/clamavdb/.ssh/authorized_keys
 </pre>
 
-Copy clam-clientsync to ~clamavdb/bin/ and clam-clientsync.conf to ~clamavdb/etc/:
-<pre>chmod 755 ~clamavdb/bin/clam-clientsync
-chmod 600 ~clamavdb/etc/clam-clientsync.conf</pre>
+Copy clam-clientsync to ~/clamavdb/bin/ and clam-clientsync.conf to ~/clamavdb/etc/:
+<pre>chmod 755 ~/clamavdb/bin/clam-clientsync
+chmod 600 ~/clamavdb/etc/clam-clientsync.conf</pre>
 
 Everything must be owned by user clamavdb.
-<pre>chown clamavdb ~clamavdb/bin/clam-clientsync
-chown clamavdb ~clamavdb/etc/clam-clientsync.conf
-chown -R clamavdb ~clamavdb/.ssh
-chown clamavdb ~clamavdb/etc
+<pre>chown clamavdb ~/clamavdb/bin/clam-clientsync
+chown clamavdb ~/clamavdb/etc/clam-clientsync.conf
+chown -R clamavdb ~/clamavdb/.ssh
+chown clamavdb ~/clamavdb/etc
 </pre>
 
 The clam-clientsync requires the "lockfile" program, which is part of the procmail package. Before going any further, please check that "lockfile" is available.

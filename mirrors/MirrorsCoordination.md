@@ -118,7 +118,7 @@ Our script (clam-clientsync) by default excludes all files with a local_* prefix
 
 You can write your own script to regularly download this file and use it on your webserver.
 
-If you are running Apache and mod_access is enabled (most common setup), this can be as simple as:
+If you are running Apache and mod_access is enabled (most common setup), this can be as simple as this.
 
 <pre>#!/bin/bash                                                                    
 . $HOME/etc/clam-clientsync.conf                                               
@@ -126,23 +126,25 @@ export RSYNC_PASSWORD
 rsync $RSYNC_USER@rsync.clamav.net::$MODULE/local_blacklist_apache $TO/.htaccess
 </pre>
 
-or for lighttpd:
+### Lighttpd ###
 
 <pre>#!/bin/bash                                                                    
 . $HOME/etc/clam-clientsync.conf                                               
 export RSYNC_PASSWORD                                                          
 rsync $RSYNC_USER@rsync.clamav.net::$MODULE/local_blacklist_lighttpd /path/local_blacklist_lighttpd</pre>
 
-If you are using lighttpd, you'll need to include local_blacklist_lighttpd into main.conf, like this:
+If you are using lighttpd, you'll need to include local_blacklist_lighttpd into main.conf, like this.
+
 <pre>$HTTP["host"] =~ "^(clamav\.yourhostname\.tld|.*\.clamav\.net)$" {                     
     include "/path/local_blacklist_lighttpd"</pre>
 
 
 ## Additional tweaks ##
 
+
 ### Manually blackList old versions of ClamAV ###
 
-We kindly ask our mirrors to support as many old versions of ClamAV as possible. However we understand that this can eat a lot of resources and not every mirror can afford it. Hereby we provide some config. examples for various web servers:
+We kindly ask our mirrors to support as many old versions of ClamAV as possible. However we understand that this can eat a lot of resources and not every mirror can afford it. Hereby we provide some config. examples for various web servers.
 
 
 ### Apache HTTP Server ###

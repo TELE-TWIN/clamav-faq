@@ -20,7 +20,7 @@ We need fast reliable mirrors. Servers eligible to become mirrors have to meet t
    * At least a 10Mbit/s link to the Internet. Traffic is bursty, that's why we request such a large pipe
    * Unlimited traffic (between 500GB and 750GB/month as of 2010)
    * At least 150MB of web space
-   * sshd listening on port 22 (see http://wiki.clamav.net/bin/view/Main/MirrorHowto#Update_firewall for an alternative solution)
+   * sshd listening on port 22 (see [Update Firewall][] for an alternative solution)
    * All the tools and protocols required for our push-mirroring system: rsync, ssh, bash, lockfile. See below for the details.
    * The mirror has to be available to all ClamAV users. We DO NOT support private mirrors!
 We also appreciate (but do not require) having shell access to the server hosting the mirror. FTP access is not accepted.
@@ -128,7 +128,7 @@ Verify the signature using:
 <pre>$ gpg --verify authorized_keys_noshell.sig authorized_keys_noshell
 $ gpg --verify authorized_keys_shell.sig authorized_keys_shell</pre>
 
-The VRT PGP public key is available on most [keyservers like this one](http://pgp.mit.edu:11371/pks/lookup?search=Sourcefire+VRT&op=index) and on [VRT Labs](http://labs.snort.org/contact.html). It can eventually be verified by telephone. Contact us by email first.
+The VRT PGP public key is available on most [keyservers like this one] (http://pgp.mit.edu:11371/pks/lookup?search=Sourcefire+VRT&op=index) and on [VRT Labs] (http://labs.snort.org/contact.html). It can eventually be verified by telephone. Contact us by email first.
 
 If you don't want to give us shell access, copy authorized_keys_noshell to ~/clamavdb/.ssh/authorized_keys:
 <pre>$ cp authorized_keys_noshell ~/.ssh/authorized_keys
@@ -185,7 +185,7 @@ MODULE="clamavdb"
 EXCLUDE="--exclude local_*"
 </pre>
 
-### Update firewall
+### Update Firewall
 
 Reconfigure your packet filter to allow incoming connections on port 22/tcp and outgoing connections to ports 873/tcp and 873/udp.
 

@@ -8,10 +8,12 @@ Many mirror sysadmins running the [Apache HTTP Server](http//httpd.apache.org/) 
 
 Here is an example config that will do the following:
 
-   * Limit .cvd downloads to 40KB/s
-   * Limit .cdiff downloads to 400KB/s
-   * Allow max 50 simultaneous connections
-   * Minimum download speed 20KB/s
+  * Limit .cvd downloads to 40KB/s
+  * Limit .cdiff downloads to 400KB/s
+  * Allow max 50 simultaneous connections
+  * Minimum download speed 20KB/s
+
+### Apache ###
 
 <pre><IfModule mod_bw>
   BandWidthModule On
@@ -22,7 +24,7 @@ Here is an example config that will do the following:
   MinBandwidth all 20000
 </IfModule></pre>
 
-If you run [lighttpd](http://www.lighttpd.net/) you can use the following:
+### Lighttpd ###
 
 <pre>$HTTP["url"] =~ "\.cvd$" {
   server.max-connections = 50
@@ -33,7 +35,7 @@ $HTTP["url"] =~ "\.cdiff$" {
   connection.kbytes-per-second = 400
 }</pre>
 
-if you run [Nginx](http://nginx.net/), you can use the following (without simultaneous connections limit):
+### Nginx ###
 
 <pre>if ( $request_uri ~ "\.cvd$" ) {
        set $limit_rate 40k;

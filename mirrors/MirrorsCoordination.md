@@ -4,7 +4,7 @@
 
 You are encouraged to put some bandwidth limit on your ClamAV mirror vhost.
 
-Many mirror sysadmins running [Apache HTTP Server](http//httpd.apache.org/) find the [Bandwidth Mod](http://bwmod.sourceforge.net/) useful for this purpose. 
+Many mirror sysadmins running the [Apache HTTP Server](http//httpd.apache.org/) find the [Bandwidth Mod](http://bwmod.sourceforge.net/) useful for this purpose. 
 
 Here is an example config that will do the following:
 
@@ -23,6 +23,7 @@ Here is an example config that will do the following:
 </IfModule></pre>
 
 If you run [lighttpd](http://www.lighttpd.net/) you can use the following:
+
 <pre>$HTTP["url"] =~ "\.cvd$" {
   server.max-connections = 50
   connection.kbytes-per-second = 40
@@ -32,7 +33,8 @@ $HTTP["url"] =~ "\.cdiff$" {
   connection.kbytes-per-second = 400
 }</pre>
 
-if you run [Nginx](http://nginx.net/) , you can use the following (without simultaneous connections limit):
+if you run [Nginx](http://nginx.net/), you can use the following (without simultaneous connections limit):
+
 <pre>if ( $request_uri ~ "\.cvd$" ) {
        set $limit_rate 40k;
 }

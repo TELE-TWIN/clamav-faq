@@ -100,7 +100,7 @@ The status page can be found on http://your-domain/cband-status.
 
 With mod_cband you can also limit the download speed based on monthly traffic or the source-ip. For more information see http://codee.pl/cband_documentation.html
 
-Thanks to Florian Schaal, 2011-07-14
+_Thanks to Florian Schaal_
 
 # Reducing traffic #
 

@@ -37,7 +37,7 @@ Here is a step-by-step guide to become a mirror
 
 ### Request a rsync account
 
-Before starting the setup, [http://www.clamav.net/about/team](contact Joel Esler) to verify that there is a need for another mirror in your country.
+Before starting the setup, [contact Joel Esler](http://www.clamav.net/about/team) to verify that there is a need for another mirror in your country.
 
 ### Configure your web server
 
@@ -243,7 +243,7 @@ Refer to your stats generator's manual for more info.
 
 Important note for Apache2 users:
 
-As stated in the Apache documentation at [[http://httpd.apache.org/docs/2.0/mod/mod_log_config.html][http://httpd.apache.org/docs/2.0/mod/mod_log_config.html ]] please note that in httpd 2.0, unlike 1.3, the %b and %B format strings do not represent the number of bytes sent to the client, but simply the size in bytes of the HTTP response (which will differ, for instance, if the connection is aborted, or if SSL is used).
+As stated in the Apache documentation at http://httpd.apache.org/docs/2.0/mod/mod_log_config.html please note that in httpd 2.0, unlike 1.3, the %b and %B format strings do not represent the number of bytes sent to the client, but simply the size in bytes of the HTTP response (which will differ, for instance, if the connection is aborted, or if SSL is used).
 
 The %O format provided by mod_logio will log the actual number of bytes sent over the network.
 
@@ -261,7 +261,7 @@ Every mirror is continuously monitored to ensure that every ClamAV user gets the
 
 Every three hours we upload a file called timestamp on every mirror. Every hour we choose a random mirror and check that timestamp is fresh. If the file is one day old or unavailable, the mirror if marked as "old" and the ClamAV team receive a warning. If the situation persists for two days, the mirror is temporarily removed from the list.
 
-You can view the current status of every ClamAV database mirror at [[http://www.clamav.net/mirrors.html][http://www.clamav.net/mirrors.html]] .
+You can view the current status of every ClamAV database mirror at http://www.clamav.net/mirrors.html.
 
 Please note that this page doesn't reflect how often the database is propagated to mirrors. It just shows the trend of mirrors availability.
 
@@ -269,9 +269,9 @@ Please note that this page doesn't reflect how often the database is propagated 
 
 ## Who is responsible for the virus database
 
-The virusdb team (aka [http://www.clamav.net/about/team](Sourcefire VRT)) take care of reviewing virus signatures, checking for new viruses in the wild and committing changes to the virus database file.
+The virusdb team, aka [Sourcefire VRT](http://www.clamav.net/about/team) take care of reviewing virus signatures, checking for new viruses in the wild and committing changes to the virus database file.
 
-The updates are released quite often (usually a few times per day). If you want to be notified whenever the virus database is updated subscribe to [http://lists.clamav.net/mailman/listinfo/clamav-virusdb](clamav-virusdb at lists.clamav.net) =.=
+The updates are released quite often (usually a few times per day). If you want to be notified whenever the virus database is updated subscribe to [clamav-virusdb at lists.clamav.net](http://lists.clamav.net/mailman/listinfo/clamav-virusdb) =.=
 
 Every time the virusdb team updates the database, an email with all the details about the update is automatically posted to this mailing-list.
 

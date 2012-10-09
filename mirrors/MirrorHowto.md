@@ -109,13 +109,14 @@ If you would like to grant us shell access, use authorized_keys_shell instead. T
 ### Download scripts and config. files
 
 Download the following files:
-   * [[http://www.clamav.net/doc/mirrors/clam-clientsync][clam-clientsync]]
-   * [[http://www.clamav.net/doc/mirrors/clam-clientsync.conf][clam-clientsync.conf]]
-   * [[http://www.clamav.net/doc/mirrors/authorized_keys_shell][authorized_keys_shell]]
-   * [[http://www.clamav.net/doc/mirrors/authorized_keys_noshell][authorized_keys_noshell]]
-   * [[http://www.clamav.net/doc/mirrors/authorized_keys_shell.sig][authorized_keys_shell.sig]]
-   * [[http://www.clamav.net/doc/mirrors/authorized_keys_noshell.sig][authorized_keys_noshell.sig]]
-from http://www.clamav.net/doc/mirrors/.
+   * [clam-clientsync]
+   * [clam-clientsync.conf]
+   * [authorized_keys_shell]
+   * [authorized_keys_noshell]
+   * [authorized_keys_shell.sig]
+   * [authorized_keys_noshell.sig]
+
+from [githubfiles].
 
 Verify the signature using:
 <pre>$ gpg --verify authorized_keys_noshell.sig authorized_keys_noshell
@@ -302,4 +303,11 @@ After freshclam downloads the new database, it sends a notify to clamd (if activ
 
 It is important for the machine running ClamAV to be able to make DNS lookups and to connect to port 80 of external hosts on Internet either directly or through a proxy. There are known problems with some transparent proxies caching what they shouldn't cache. If you should run into this kind of problem, please check your proxy configuration before reporting a bug.
 
-[MirrorHowTo](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorHowTo.md)
+[MirrorHowTo](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorHowto.md)
+[authorized_keys_noshell.sig](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/files/authorized_keys_noshell.sig.txt)
+[authorized_keys_noshell](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/files/authorized_keys_noshell.txt)
+[authorized_keys_shell.sig](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/files/authorized_keys_shell.sig.txt)
+[authorized_keys_shell](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/files/authorized_keys_shell.txt)
+[clam-clientsync.conf](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/files/clam-clientsync.conf.txt)
+[clam-clientsync](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/files/clam-clientsync.txt)
+[githubfiles](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/files/)

@@ -73,7 +73,7 @@ Edit the config for the vhost and add
 
 This limits the download speed to 20kb/s, allows 100 requests/second and a maximum of 300 connections.
 
-To improve mod_cband's performance add:
+To improve mod_cband's performance add.
 
 <pre>CBandScoreFlushPeriod 1
 CBandRandomPulse On</pre>
@@ -82,7 +82,7 @@ to _/etc/httpd/conf/httpd.conf_
 
 Done. Now restart apache.
 
-If you would like a scoreboard, set something like:
+If you would like a scoreboard, set something like.
 
 <pre><IfModule mod_cband.c>
   CBandSpeed 20kb/s 100 300
@@ -92,24 +92,26 @@ If you would like a scoreboard, set something like:
   </Location>
 </IfModule></pre>
 
-Create the directory for CBandScoreboard and make it writeable by the apache-user:
+Create the directory for CBandScoreboard and make it writeable by the apache-user.
+
 <pre>$ chown wwwrun.www /srv/www/scoreboard/</pre>
 
 The status page can be found on http://your-domain/cband-status.
 
 With mod_cband you can also limit the download speed based on monthly traffic or the source-ip. For more information see http://codee.pl/cband_documentation.html
 
-Thanks to Florian Schaal - 2011-07-14
+Thanks to Florian Schaal, 2011-07-14
 
-# Reducing traffic:
+# Reducing traffic #
 
-## The centrally maintained blacklist
+## The centrally maintained blacklist ##
 
-We provide a configuration file for Apache and Lighttpd which lists:
+We provide a configuration file for Apache and Lighttpd which lists.
+
   * IP addresses that are reported by our mirrors as abusers
   * obsolete ClamAV installations
 
-The names of the files are:
+The names of the files are.
 
   * local_blacklist_apache - written following Apache mod_access syntax, it can be used as an .htaccess file
   * local_blacklist_lighttpd - meant to be included into lighttpd config.

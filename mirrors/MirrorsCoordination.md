@@ -90,21 +90,20 @@ The status page can be found on http://your-domain/cband-status.
 
 With mod_cband you can also limit the download speed based on monthly traffic or the source-ip. For more information see http://codee.pl/cband_documentation.html
 
--- Main.FlorianSchaal - 2011-07-14
+Thanks to Florian Schaal - 2011-07-14
 
 # Reducing traffic:
 
 ## The centrally maintained blacklist
 
 We provide a configuration file for Apache and Lighttpd which lists:
+  * IP addresses that are reported by our mirrors as abusers
+  * obsolete ClamAV installations
 
-   * IP addresses that are reported by our mirrors as abusers
-   * obsolete ClamAV installations
+The names of the files are:
 
-The name of the files are:
-
-   * local_blacklist_apache - written following Apache mod_access syntax, it can be used as an .htaccess file
-   * local_blacklist_lighttpd - meant to be included into lighttpd config.
+  * local_blacklist_apache - written following Apache mod_access syntax, it can be used as an .htaccess file
+  * local_blacklist_lighttpd - meant to be included into lighttpd config.
 
 Our script (clam-clientsync) by default excludes all files with a local_* prefix, so you won't see this file on your mirror.
 

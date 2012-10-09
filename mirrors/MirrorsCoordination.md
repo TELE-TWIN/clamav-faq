@@ -94,13 +94,16 @@ If you would like a scoreboard, set something like.
 
 Create the directory for CBandScoreboard and make it writeable by the apache-user.
 
-<pre>$ chown wwwrun.www /srv/www/scoreboard/</pre>
+<pre>
+  $ chown wwwrun.www /srv/www/scoreboard/
+</pre>
 
-The status page can be found on http://your-domain/cband-status.
+The status page can be found on _http://your-domain/cband-status_.
 
 With mod_cband you can also limit the download speed based on monthly traffic or the source-ip. For more information see http://codee.pl/cband_documentation.html
 
 _Thanks to Florian Schaal_
+
 
 # Reducing traffic #
 

@@ -104,7 +104,7 @@ no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty,command="bash ~/
 
 The only command which can be executed by the owner of the corresponding ssh private key is ~/bin/clam-clientsync. We will only be able to trigger the execution of that script and nothing else!
 
-If you would like to grant us shell access, use authorized_keys_shell instead. That file contains Luca Gibelli ssh public key too.
+If you would like to grant us shell access, use authorized_keys_shell instead.
 
 ### Download scripts and config. files
 
@@ -158,7 +158,7 @@ The clam-clientsync requires the "lockfile" program, which is part of the procma
 
 ### Submit the mirror details
 
-Send an email with the server's details to luca -at- clamav.net following this template:
+Send an email with the server's details to vrt -at- sourcefire.com following this template:
 <pre>
    * clamav.foo.com
    * ip address: 1.2.3.4

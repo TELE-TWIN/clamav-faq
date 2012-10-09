@@ -203,9 +203,10 @@ The Access Log of apache must send to syslog-ng:
 
 ### Apache HTTP Server (httpd.conf or vhost.conf) ###
 
-The logformat and the accesslog must be defined like:
+The logformat and the accesslog must be defined like.
 
-<pre>LogFormat "%h %v %l %u %t \"%r\" %&gt;s \"%{Referer}i\" \"%{User-Agent}i\"" syslog<br />CustomLog= =/var/log/apache2/access.log syslog</pre>
+<pre>LogFormat "%h %v %l %u %t \"%r\" %&gt;s \"%{Referer}i\" \"%{User-Agent}i\"" syslog<br />CustomLog= =/var/log/apache2/access.log syslog
+</pre>
 
 As long as the log file runs only through the pipe, no entries are stored. The configuration used here evaluates merely the log file. To receive an Access Log as a file, you must extend either syslog-ng by a destination or the apache-config by a CustomLog.
 
@@ -213,11 +214,11 @@ As long as the log file runs only through the pipe, no entries are stored. The c
 
 <pre>source s_apache_access { <br /> pipe("/var/log/apache2/access.log"); <br /> };<br /><br />destination d_clamav-403 { <br /> file("/proc/net/xt_recent/clamav-403"<br /> template("+${APACHE.SRC-IP}\n")); <br /> };<br /><br />filter f_clamav_403 { <br /> message('clamav.net') <br /> and message(' 403 '); <br /> };<br /><br />parser p_apache_src_ip { <br /> csv-parser(columns("APACHE.SRC-IP")<br /> delimiters(': ') <br /> flags(escape-none,greedy) <br /> template("${MSGHDR}") ); <br /> };<br /><br />log { <br /> source(s_apache_access);<br /> filter(f_clamav_403);<br /> parser(p_apache_src_ip);<br /> destination(d_clamav-403); <br /> };</pre>
 
-## Iptables
+## Iptables ##
 
 <pre>iptables -A INPUT -p tcp --dport 80 -m recent --rcheck --name clamav-403 --seconds 3600 --hitcount 5 -j DROP</pre>
 
-## how it works
+## how it works ##
 
 Syslog-ng filters apache messages with the contents clamav.net and 403. As destination /proc/net/xt_recent/clamav-403 is defined. The template adds the IP to the firewall. With reach from "hitcount" the IP is blocked "seconds".
 
@@ -225,13 +226,12 @@ If you replace the _rcheck_ here with an _update_ statement, the block will last
 
 By default xt_recent stores 100 IP addresses. You can change the limit with "modprobe ipt_recent ip_list_tot=10000" (here 10000). This is only possible before the first iptables rule is put on.
 
-Use:
-<pre>$ chmod 600 /sys/module/xt_recent/parameters/ip_list_tot<br /> echo 10000 &gt; /sys/module/xt_recent/parameters/ip_list_tot<br /> chmod 400 /sys/module/xt_recent/parameters/ip_list_tot</pre>
+Use.
+<pre>$ chmod 600 /sys/module/xt_recent/parameters/ip_list_tot<br /> echo 10000 &gt; /sys/module/xt_recent/parameters/ip_list_tot<br /> chmod 400 /sys/module/xt_recent/parameters/ip_list_tot
+</pre>
 
 to change ip_list_tot "on-the-fly"
 
 If you use ipt_recent instead of xt_recent, be sure to modify the filenames and path.
 
 Credits: [Valentijn Sessink](http://valentijn.sessink.nl/?p=322)
-
-

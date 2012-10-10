@@ -1,21 +1,18 @@
 # Installing ClamAV #
 
-* [Installing from source][]
-* [Installing from packages][]
-
 ## Installing from source ##
 
-* Check [Requirements][]
-* Uninstall any old version: see UninstallClamAV (Note: this isn't essential, but removes sources of problems).
-* wget the source gzip file: see WhichVersion
+* Check [Requirements](#Requirements)
+* Uninstall any old version, see UninstallClamAV (Note: this isn't essential, but removes sources of problems).
+* wget the source gzip file, see WhichVersion
 * untar the source to an appropriate location. Note that most modern versions of tar will automatically ungzip for you.
 * ensure you have a user clamav and group clamav.
->* If you're using a different group/user you must specify that using the --with-user and/or --with-group option when you run configure
+>* If you're using a different group/user you must specify that using the _--with-user_ and/or _--with-group_ option when you run configure
 * Configure the build:
->* for clamav-milter support ./configure --enable-milter
->* to support new features ./configure --enable-experimental
->* otherwise ./configure
-* run "make"
+>* for clamav-milter support _./configure --enable-milter_
+>* to support new features _./configure --enable-experimental_
+>* otherwise _./configure_
+* run _make_
 * if you did not uninstall the previous version, stop any running services.
 * as root, run "make install" to install the binaries
 * it is recommended that you run ldconfig as root after installing
@@ -44,17 +41,17 @@ You don't necessarily need all packages. Please read ClamOverview carefully to u
 
 ## Operating System Specific Information ##
 
-* [Debian][]
-* [RedHat and Fedora][]
-* [Mandriva][]
-* [Gentoo][]
-* [SuSE][]
-* [FreeBSD, OpenBSD, NetBSD][]
-* [Solaris][]
-* [Slackware][]
-* [Windows][]
-* [CentOS][]
-* [OpenVMS][]
+* [Debian](#Debian)
+* [RedHat and Fedora](#RedHat)
+* [Mandriva](#Mandriva)
+* [Gentoo](#Gentoo)
+* [SuSE](#SuSE)
+* [FreeBSD, OpenBSD, NetBSD](#FreeBSD)
+* [Solaris](#Solaris)
+* [Slackware](#Slackware)
+* [Windows](#Windows)
+* [CentOS](#CentOS)
+* [OpenVMS](#OpenVMS)
 
 ### Debian ###
 
@@ -83,9 +80,9 @@ http://matrix.senecac.on.ca/~mpaivaneto/clamav-0.94-1.fc9.src.rpm
 
 * rpm -ivh http://matrix.senecac.on.ca/~mpaivaneto/clamav-0.94-1.fc9.i386.rpm
 
-For more information contact me at mpaivaneto@learnDEL_ME.senecac.on.ca or at [my blog]
+For more information contact me at mpaivaneto@learn.senecac.on.ca
 
-Packages that you'll need to download:
+Packages that you'll need to download.
 
 * clamav-db-0.xx.rpm
 * clamav-devel-0.xx.rpm
@@ -103,7 +100,7 @@ Upgrading clamav engine from rpms
 
 * rpm -Uvh clamav-db-0.xx.rpm clamav-devel-0.xx.rpm clamav-0.xx.rpm clamd-0.xx.rpm
 
-__Note:__ *Richard Vinke* reports The file "clamd-0.xx.rpm" is not available for fedora5. I am using "rpm -Uvh" without this file. I needed the following post-install actions:
+_Note_ *Richard Vinke* reports The file "clamd-0.xx.rpm" is not available for fedora5. I am using "rpm -Uvh" without this file. I needed the following post-install actions.
 
 * Change the ownership of the directory _/var/lib/clamav_ to the user as stated in the configuration file.
 * Rename the _/etc/clamd.conf.rpmsave_ to _/etc/clamd.conf_.
@@ -130,7 +127,7 @@ Nobody uses Gentoo.
 
 ### SuSE ###
 
-For newbies, the easiest way to install ClamAV is to find an RPM for SuSE. Look in ftp://ftp.suse.com/pub/projects/clamav/. Go one level down to see if there is a newer version. On the next level choose your SuSE Version and Processor-Type e.g., 9.3-i386 for SuSE 9.3 on a i386 compatible system. The program file requires about 1 MB, and the database file requires about 8 MB. The program file is the most important. When you run _freshclam_ later, it may update the database without needing to do this database ftp. But if _freshclam_ fails, come back and get this database RPM and install it like the other.
+For newbies, the easiest way to install ClamAV is to find an RPM for SuSE. Look in _ftp://ftp.suse.com/pub/projects/clamav/_. Go one level down to see if there is a newer version. On the next level choose your SuSE Version and Processor-Type e.g., 9.3-i386 for SuSE 9.3 on a i386 compatible system. The program file requires about 1 MB, and the database file requires about 8 MB. The program file is the most important. When you run _freshclam_ later, it may update the database without needing to do this database ftp. But if _freshclam_ fails, come back and get this database RPM and install it like the other.
 
 If you use the generic source/compile download (not SuSE RPM) it will, by default, put the programs and documentation in places that SuSE does not expect. Then it is hard to determine which files you're really running from, especially for a newbie to SuSE.
 
@@ -159,7 +156,7 @@ There are a number of package maintainers for ClamAV on Solaris. The installatio
 
 #### Solaris 9 & Solaris 10 Packages from Citrus IT ####
 
-Download the package file from [clamav.citrus-it.net].
+Download the package file from http://clamav.citrus-it.net/.
 
 It will be a single bzip2-compressed package datastream file with a filename of the form ClamAV-<version>.bz2 or ClamAV-s10-<version>.bz2
 
@@ -308,7 +305,7 @@ them for your environment.
  /opt/ClamAV/etc/clamd.conf
  /opt/ClamAV/etc/freshclam.conf
 
-and then the daemons can be started with:
+and then the daemons can be started with
 
  svcadm enable clamav
 

@@ -8,13 +8,13 @@ Sometimes the servers which perform the scan are not directly connected to Inter
 
 For people who face these problems, we recommend using one of the following 3 setups.
 
-## Use an HTTP proxy ##
+## 1. Use an HTTP proxy ##
 
 This solution is really easy to implement and is bandwidth efficient.
 
 Install a proxy server (e.g. squid) and then tell your freshclam clients to use it. This can be done by setting the _HTTPProxyServer_ parameter in _freshclam.conf_ (see man 5 freshclam.conf for the details).
 
-## Serve CVD files from a local web server ##
+## 2. Serve CVD files from a local web server ##
 
 This solution is really simple to implement but it's only effective if your clients are all on the same local network and bandwidth is not an issue for you.
 
@@ -27,7 +27,7 @@ First the database will be downloaded to the local webserver and then the other 
 <pre>DatabaseMirror machine1.mylan
 ScriptedUpdates off</pre>
 
-## Serve CVD and CDIFF files from a local web server ##
+## 3. Serve CVD and CDIFF files from a local web server ##
 
 This solution is bandwidth efficient but it's a little bit trickier to set up and involves the use of custom scripts in place of freshclam.
 
